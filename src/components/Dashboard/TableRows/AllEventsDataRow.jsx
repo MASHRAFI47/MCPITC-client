@@ -33,8 +33,8 @@ const AllEventsDataRow = ({ eve, refetch }) => {
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
-            mutateAsync(id)
             if (result.isConfirmed) {
+                mutateAsync(id)
                 Swal.fire({
                     title: "Deleted!",
                     text: "Your file has been deleted.",
