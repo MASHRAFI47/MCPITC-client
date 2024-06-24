@@ -21,8 +21,8 @@ const Sectors = () => {
                 <SectionTitle title={"Sectors"} desc={'Check our sectors to shine your skills'} />
 
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-5">
-                    <div className="card card-compact border py-8 sector-card" data-aos="flip-left">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-5" data-aos="slide-left">
+                    <div className="card card-compact border py-8 sector-card" >
                         <figure><img src={webdev} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title mx-auto text-white">Website Development</h2>
@@ -30,7 +30,7 @@ const Sectors = () => {
                     </div>
 
 
-                    <div className="card card-compact border py-8 sector-card" data-aos="flip-left" data-aos-delay="100">
+                    <div className="card card-compact border py-8 sector-card">
                         <figure><img src={multimedia} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title mx-auto text-white">Multimedia Presentation</h2>
@@ -38,14 +38,14 @@ const Sectors = () => {
                     </div>
 
 
-                    <div className="card card-compact border py-8 sector-card" data-aos="flip-left" data-aos-delay="200">
+                    <div className="card card-compact border py-8 sector-card">
                         <figure><img src={photoshop} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title mx-auto text-white">Photoshop</h2>
                         </div>
                     </div>
 
-                    <div className="card card-compact border py-8 sector-card" data-aos="flip-left" data-aos-delay="300">
+                    <div className="card card-compact border py-8 sector-card">
                         <figure><img src={excel} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title mx-auto text-white">Microsoft Excel</h2>
