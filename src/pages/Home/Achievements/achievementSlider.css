@@ -1,0 +1,17 @@
+.mySwiper2 {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide-slides {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide-slides img {
+    display: block;
+    width: 100%;
+}

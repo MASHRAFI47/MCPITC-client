@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", serif;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+}
+
+a.text-white.font-bold.active {
+    background-color: #4B70F5 !important;
+}
+
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+/* dashboard layout for mobile */
+.EZDrawer .EZDrawer__checkbox:checked~.EZDrawer__container {
+    background-image: linear-gradient(to bottom, #0101a3, #00004c);
+}
+
+
+
