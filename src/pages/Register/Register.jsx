@@ -76,7 +76,7 @@ const Register = () => {
             {errors.password && <span className="text-red-600">This field is required</span>}
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#e92bde] hover:bg-[#ff3535] text-white" disabled={loading}>Register {loading ? <CgSpinnerTwoAlt className="animate-spin" /> : ""}</button>
+            <button className="btn glass bg-[#4B70F5] hover:bg-[#ff3535] text-white" disabled={loading}>Register {loading ? <CgSpinnerTwoAlt className="animate-spin" /> : ""}</button>
           </div>
 
           <p className="text-center">Already a user? <Link to={'/login'} className="font-bold hover:text-red-600">Login Now</Link></p>

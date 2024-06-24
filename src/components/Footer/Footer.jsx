@@ -40,6 +40,7 @@ const Footer = () => {
             <nav>
                 <h6 className="footer-title">Developers</h6>
                 <Link className="link link-hover" to={'/developers'}>Developer</Link>
+                <Link className="link link-hover" to={'/login'}>Login</Link>
             </nav>
             <nav>
                 <h6 className="footer-title">Social</h6>

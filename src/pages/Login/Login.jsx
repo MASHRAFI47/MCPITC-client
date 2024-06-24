@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import useAuth from "../../hooks/useAuth"
 import toast from "react-hot-toast"
 import axios from "axios"
@@ -56,12 +56,12 @@ const Login = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn glass bg-[#e92bde] hover:bg-[#ff3535] text-white">Login</button>
+                        <button className="btn glass bg-[#4B70F5] hover:bg-[#ff3535] text-white">Login</button>
                     </div>
 
                 </form>
 
-                {/* <p className="text-center mb-10">New user? <Link to={'/register'} className="font-bold hover:text-red-600">Register Now</Link></p> */}
+                <p className="text-center mb-10">New user? <Link to={'/register'} className="font-bold hover:text-red-600">Register Now</Link></p>
 
             </div>
         </div>
