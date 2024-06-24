@@ -26,12 +26,14 @@ import AllEventSegments from "../pages/Dashboard/Admin/AllEventSegments";
 import AdminRoute from "./AdminRoute";
 import Executives from "../pages/Executives/Executives";
 import Developers from "../pages/Developers/Developers";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: "/",
