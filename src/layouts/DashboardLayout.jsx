@@ -13,6 +13,7 @@ import useRole from "../hooks/useRole";
 import AdminMenu from "../components/Dashboard/Menu/AdminMenu";
 import { FaHome } from "react-icons/fa"
 import useAuth from "../hooks/useAuth"
+import { Helmet } from "react-helmet-async"
 
 
 const DashboardLayout = () => {
@@ -27,6 +28,9 @@ const DashboardLayout = () => {
 
     return (
         <div className="md:flex">
+            <Helmet>
+                <title>MCPITC | Dashboard</title>
+            </Helmet>
 
 
             {/* Mobile and tablets Drawer */}

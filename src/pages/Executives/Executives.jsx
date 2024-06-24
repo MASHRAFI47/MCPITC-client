@@ -41,6 +41,7 @@ import adnan from '../../assets/images/panel23to24/adnan.jpg'
 import faqid from '../../assets/images/panel23to24/faqid.jpeg'
 import tashfia from '../../assets/images/panel23to24/tashfia.jpeg'
 import useAuth from '../../hooks/useAuth';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -345,6 +346,9 @@ const Executives = () => {
 
     return (
         <section className={`${theme === "" ? "bg-[#4C3BCF]" : ""}`}>
+            <Helmet>
+                <title>MCPITC | Executives</title>
+            </Helmet>
             <div className="container mx-auto">
                 {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     <div>

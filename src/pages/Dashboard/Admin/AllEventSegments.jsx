@@ -43,7 +43,7 @@ const AllEventSegments = () => {
 
     if (isLoading) return <LoadingSpinner />
 
-    console.log(segments)
+
 
     const handleDelete = id => {
         Swal.fire({
@@ -71,19 +71,22 @@ const AllEventSegments = () => {
         <div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
-                    segments?.map(segment => <div key={segment?._id} className="card bg-base-100 shadow-xl image-full">
-                        <figure><img src={segment?.image_url} className="w-full h-[8rem]" alt={segment?.segmentName} /></figure>
-                        <div className="card-body">
-                            <h2 className="card-title">{segment?.segmentName}</h2>
-                            <p>{segment?.description.length < 20 ? segment?.description : segment?.description.slice(0, 35).concat('...')}</p>
-                            <div className="card-actions justify-end">
-                                <Link className="btn glass bg-[#e92bde] hover:bg-[#ff3535] text-white" to={`/event-segment-details/${segment?._id}`}>View</Link>
-                                <Link to={`../update-event-segment/${segment?._id}`} className="btn btn-success text-white text-xl"><FaRegEdit /></Link>
-                                <button className="btn btn-error text-white text-xl" onClick={() => handleDelete(segment?._id)}><FaRegTrashAlt /></button>
+                    segments.length == 0 ?
+                        <h1 className="text-2xl font-bold">No Segments Uploaded Yet</h1>
+                        :
+                        segments?.map(segment => <div key={segment?._id} className="card bg-base-100 shadow-xl image-full">
+                            <figure><img src={segment?.image_url} className="w-full h-[8rem]" alt={segment?.segmentName} /></figure>
+                            <div className="card-body">
+                                <h2 className="card-title">{segment?.segmentName}</h2>
+                                <p>{segment?.description.length < 20 ? segment?.description : segment?.description.slice(0, 35).concat('...')}</p>
+                                <div className="card-actions justify-end">
+                                    <Link className="btn glass bg-[#e92bde] hover:bg-[#ff3535] text-white" to={`/event-segment-details/${segment?._id}`}>View</Link>
+                                    <Link to={`../update-event-segment/${segment?._id}`} className="btn btn-success text-white text-xl"><FaRegEdit /></Link>
+                                    <button className="btn btn-error text-white text-xl" onClick={() => handleDelete(segment?._id)}><FaRegTrashAlt /></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    )
+                        )
                 }
             </div>
         </div>

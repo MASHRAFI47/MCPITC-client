@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import Lottie from "lottie-react";
 import contactAnimation from "../../assets/contact.json";
 import useAuth from '../../hooks/useAuth';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -35,6 +36,9 @@ const Contact = () => {
 
   return (
     <section className={`${theme === "" ? "bg-[#4C3BCF]" : ""} px-5 md:px-0`}>
+      <Helmet>
+        <title>MCPITC | Contact</title>
+      </Helmet>
       {/* <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" required />

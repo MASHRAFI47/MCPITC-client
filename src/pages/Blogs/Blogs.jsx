@@ -7,6 +7,7 @@ import moment from "moment/moment"
 import fbfollow from '../../assets/images/follow/followfb.webp'
 import instafollow from '../../assets/images/follow/followinsta.jpeg'
 import useAuth from "../../hooks/useAuth"
+import { Helmet } from "react-helmet-async"
 
 const Blogs = () => {
   const { theme } = useAuth()
@@ -26,6 +27,10 @@ const Blogs = () => {
 
   return (
     <section className={`min-h-screen ${theme === "" ? "bg-[#4C3BCF]" : ""} px-5 md:px-0`}>
+      <Helmet>
+        <title>MCPITC | Blogs</title>
+      </Helmet>
+
       <div className="container mx-auto relative">
         <div className="grid grid-cols-1 md:grid-cols-4">
           {

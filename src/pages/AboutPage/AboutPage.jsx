@@ -3,12 +3,17 @@ import techAnimation from "../../assets/aboutAnimation.json";
 import Developers from "../Developers/Developers";
 import useAuth from "../../hooks/useAuth";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import { Helmet } from "react-helmet-async";
 
 
 const AboutPage = () => {
     const { theme } = useAuth()
     return (
         <div className={`py-10 px-5 md:px-0 ${theme === "" ? "bg-[#4C3BCF] " : ""}`} id="about">
+            <Helmet>
+                <title>MCPITC | About</title>
+            </Helmet>
+
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center mb-10">
                 <div className="flex justify-center" data-aos="zoom-in" data-aos-delay="100">
                     <Lottie animationData={techAnimation} className="w-3/4" loop={true} />

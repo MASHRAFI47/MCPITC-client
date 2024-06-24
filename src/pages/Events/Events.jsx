@@ -6,6 +6,7 @@ import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner"
 //date-fns
 import { format } from "date-fns"
 import useAuth from "../../hooks/useAuth"
+import { Helmet } from "react-helmet-async"
 
 const Events = () => {
   let i = 100;
@@ -24,6 +25,10 @@ const Events = () => {
 
   return (
     <section className={`min-h-screen ${theme === "" ? "bg-[#4C3BCF]" : ""} px-5 md:px-0`}>
+      <Helmet>
+        <title>MCPITC | Events</title>
+      </Helmet>
+
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {
           events?.map(eve => <div key={eve?._id} className="" data-aos="flip-left" data-aos-delay={i += 100}>
