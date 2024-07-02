@@ -12,6 +12,9 @@ To run this locally in your system =>
 - Type npm install and hit enter
 - Type this command: npm run dev (if you have nodejs installed in your system)
 
+
+About the web:
+
 - Home page: Delivers all the necessary information about the club.
 - Events page: Browse all the events and added segments.
 - Blogs page: Read blogs from here.
