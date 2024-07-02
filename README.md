@@ -5,6 +5,13 @@
 
 Technologies Used: Tailwind, Firebase, ReactJS, NodeJS, ExpressJS, MongoDB
 
+To run this locally in your system => 
+- Click the Code button and copy the URL
+- In your cmd/terminal, type git clone (paste the copied URL)
+- Open the cloned folder using cmd/terminal
+- Type npm install and hit enter
+- Type this command: npm run dev (if you have nodejs installed in your system)
+
 - Home page: Delivers all the necessary information about the club.
 - Events page: Browse all the events and added segments.
 - Blogs page: Read blogs from here.
