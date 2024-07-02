@@ -5,14 +5,6 @@
 
 Technologies Used: Tailwind, Firebase, ReactJS, NodeJS, ExpressJS, MongoDB
 
-To run this locally in your system => 
-- Click the Code button and copy the URL
-- In your cmd/terminal, type git clone (paste the copied URL)
-- Open the cloned folder using cmd/terminal
-- Type npm install and hit enter
-- Type this command: npm run dev (if you have nodejs installed in your system)
-
-
 About the web:
 
 - Home page: Delivers all the necessary information about the club.
@@ -30,4 +22,12 @@ Functionalities: Various functionalities working in backend.
  - 💍 **Add Event Segment**: Admins can add event segment for the added events which includes image, date range etc.
  - 🧢 **Add Blog**: Admins can post blogs from here
  - 🌐 **All Blogs**: Admins can view all the blogs but also edit and delete them.
+
+
+ To run this locally in your system => 
+- Click the Code button and copy the URL
+- In your cmd/terminal, type git clone (paste the copied URL)
+- Open the cloned folder using cmd/terminal
+- Type npm install and hit enter
+- Type this command: npm run dev (if you have nodejs installed in your system)
 
