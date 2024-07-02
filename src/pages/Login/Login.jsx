@@ -29,6 +29,10 @@ const Login = () => {
                     .then(res => console.log(res.data))
                 console.log(result.user)
             })
+            .catch(error => {
+                console.log(error.message)
+                toast.error("Invalid email or password")
+            })
     }
 
 

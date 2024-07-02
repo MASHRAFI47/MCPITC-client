@@ -1,8 +1,23 @@
-# React + Vite
+# Meal Lounge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Link: Here goes the website live link: [MCPITC_Club](https://mcpitc.web.app/)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Technologies Used: Tailwind, Firebase, ReactJS, NodeJS, ExpressJS, MongoDB
+
+- Home page: Delivers all the necessary information about the club.
+- Events page: Browse all the events and added segments.
+- Blogs page: Read blogs from here.
+- Executives page: View all our club members
+- Contact page: Form which directly sends mail to the owner
+
+Functionalities: Various functionalities working in backend.
+ - 👜 **Login/Register functionality**, mainly designed for web admins.
+ - 🎈 **Admin Dashboard**: A live dashboard features,
+ - 👫 **Manage Users**: Admins can view registered users and make them admin with one click.
+ - 🤳 **Add Event**: Admins can add event including image upload and date range.
+ - 💎 **All Events**: Admins can view all the events and also edit and delete them.
+ - 💍 **Add Event Segment**: Admins can add event segment for the added events which includes image, date range etc.
+ - 🧢 **Add Blog**: Admins can post blogs from here
+ - 🌐 **All Blogs**: Admins can view all the blogs but also edit and delete them.
+
