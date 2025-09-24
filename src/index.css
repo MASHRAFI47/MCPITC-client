@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    overflow-x:hidden;
+}
+
 h1,
 h2,
 h3,
@@ -16,14 +20,14 @@ p {
     font-family: "Poppins", sans-serif;
 }
 
-a.text-white.font-bold.active {
+/* a.text-white.font-bold.active {
     background-color: #4B70F5 !important;
-}
+} */
 
-section {
+/* section {
     padding-top: 60px;
     padding-bottom: 60px;
-}
+} */
 
 
 /* dashboard layout for mobile */

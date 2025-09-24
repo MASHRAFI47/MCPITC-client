@@ -34,7 +34,7 @@ const UpdateBlog = () => {
             //     })
 
             // method-2(using async await)
-            const response = await fetch(`https://mcpitc-server.vercel.app/blog/${id}`);
+            const response = await fetch(`${import.meta.env.VITE_Api_Url}/blog/${id}`);
             const data = await response.json();
             return {
                 title: data?.title,

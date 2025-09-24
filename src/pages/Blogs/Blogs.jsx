@@ -23,22 +23,20 @@ const Blogs = () => {
 
   if (isLoading) return <LoadingSpinner />
 
-  console.log(blogs)
-
   return (
-    <section className={`min-h-screen ${theme === "" ? "bg-[#4C3BCF]" : ""} px-5 md:px-0`}>
+    <section className={`min-h-screen ${theme === "" ? "bg-[#dee8f6]" : ""} px-5 md:px-0 py-12`}>
       <Helmet>
-        <title>MCPITC | Blogs</title>
+        <title>MCPIC | Blogs</title>
       </Helmet>
 
       <div className="container mx-auto relative">
         <div className="grid grid-cols-1 md:grid-cols-4">
           {
             blogs?.map(blog => <div className="col-span-3 border border-neutral-500 rounded-xl mb-20 p-3 text-wrap space-y-5" key={blog?._id} data-aos="fade-in">
-              <h3 className="text-white text-lg"><span className="text-[#3DC2EC] font-bold text-lg">Publisher:</span> {blog?.publisher}</h3>
-              <pre className="text-white whitespace-pre-wrap"><span className="text-[#3DC2EC] font-bold text-md">Description:</span> {blog?.description}</pre>
-              <p className="text-white"><span className="text-[#3DC2EC] font-bold text-md">Publish Date:</span> {moment(blog?.timestamp).format('MMMM Do YYYY, h:mm:ss a')}</p>
-              <img src={blog?.image_url} className="w-full h-[35rem] rounded-lg" alt="" />
+              <h3 className={`${theme === "" ? "text-black" : "text-gray-200"} text-lg`}><span className="text-[#0052cc] font-bold text-lg">Publisher:</span> {blog?.publisher}</h3>
+              <p className={`${theme === "" ? "text-black" : "text-gray-200"} whitespace-pre-wrap`}><span className="text-[#0052cc] font-bold text-md">Description:</span> {blog?.description}</p>
+              <p className={`${theme === "" ? "text-black" : "text-gray-200"}`}><span className="text-[#0052cc] font-bold text-md">Publish Date:</span> {moment(blog?.timestamp).format('MMMM Do YYYY, h:mm:ss a')}</p>
+              <img src={blog?.image_url} className="w-full h-[35rem] rounded-lg" alt="blog image" />
             </div>)
           }
 
@@ -46,8 +44,8 @@ const Blogs = () => {
           <div className="hidden md:inline-block absolute right-0 border-neutral-500">
             {/* Social or others */}
             <div className="">
-              <a href="https://www.facebook.com/mcpitc"><img src={fbfollow} className="w-[10rem]" alt="" /></a>
-              <a href="https://www.instagram.com/mcpitc_official"><img src={instafollow} className="w-[10rem]" alt="" /></a>
+              <a href="https://www.facebook.com/ictclub.mcpsc" target="_blank"><img src={fbfollow} className="w-[10rem]" alt="mcpic facebook" /></a>
+              <a href="https://www.instagram.com/ictclub.mcpsc/" target="_blank"><img src={instafollow} className="w-[10rem]" alt="mcpic instagram" /></a>
             </div>
           </div>
         </div>

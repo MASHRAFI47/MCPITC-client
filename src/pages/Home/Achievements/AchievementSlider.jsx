@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import './achievementSlider.css'
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 
 
 
@@ -39,10 +39,14 @@ const AchievementSlider = () => {
                         modifier: 1,
                         slideShadows: true,
                     }}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false, // keeps autoplay even after user swipes
+                    }}
                     pagination={{
                         clickable: true,
                     }}
-                    modules={[EffectCoverflow, Pagination]}
+                    modules={[EffectCoverflow, Pagination, Autoplay]}
                     className="mySwiper2"
                 >
 

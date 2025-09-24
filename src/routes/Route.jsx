@@ -27,6 +27,10 @@ import AdminRoute from "./AdminRoute";
 import Executives from "../pages/Executives/Executives";
 import Developers from "../pages/Developers/Developers";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import ApplyForExecutive from "../pages/ApplyForExecutive/ApplyForExecutive";
+import Recruit from "../pages/Dashboard/Admin/Recruit";
+import Profile from "../pages/Dashboard/Common/Profile/Profile";
+import MyForms from "../pages/Dashboard/Member/MyForms";
 
 
 export const router = createBrowserRouter([
@@ -70,6 +74,10 @@ export const router = createBrowserRouter([
             {
                 path: "/developers",
                 element: <Developers />
+            },
+            {
+                path: "/apply-for-executive",
+                element: <PrivateRoute> <ApplyForExecutive /> </PrivateRoute>
             },
         ]
     },
@@ -129,6 +137,18 @@ export const router = createBrowserRouter([
             {
                 path: "update-blog/:id",
                 element: <AdminRoute><UpdateBlog /></AdminRoute>,
+            },
+            {
+                path: "recruit",
+                element: <AdminRoute><Recruit /></AdminRoute>,
+            },
+            {
+                path: "profile",
+                element: <PrivateRoute><Profile /></PrivateRoute>,
+            },
+            {
+                path: "my-forms",
+                element: <PrivateRoute><MyForms /></PrivateRoute>,
             },
         ]
     },

@@ -5,7 +5,7 @@ import LoadingSpinner from "../../../components/LoadingSpinner/LoadingSpinner";
 import ManageUsersDataRow from "../../../components/Dashboard/TableRows/ManageUsersDataRow";
 
 const ManageUsers = () => {
-    const { user } = useAuth();
+    const { user, loading } = useAuth();
     const axiosSecure = useAxiosSecure();
 
     const { data: users = [], isLoading, refetch } = useQuery({
@@ -13,12 +13,11 @@ const ManageUsers = () => {
         queryFn: async () => {
             const { data } = await axiosSecure.get('/users')
             return data
-        }
+        },
+        enabled: !!user?.email,
     })
 
-    if (isLoading) return <LoadingSpinner />
-
-    console.log(users)
+    if (loading || isLoading) return <LoadingSpinner />
 
     return (
         <div>
@@ -30,6 +29,7 @@ const ManageUsers = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Role</th>
+                            <th>Designation</th>
                             <th>Action</th>
                         </tr>
                     </thead>

@@ -28,7 +28,7 @@ const Footer = () => {
         //         </div>
         //     </nav>
         // </footer>
-        <footer className="footer bg-neutral-800 text-white p-10">
+        <footer className="footer bg-[#001734] text-white p-10">
             <aside>
                 <img src={logo} className='w-24' alt="" />
                 <p>Mirpur Cantonment Public Information and Technology Club<br />Regular club activities since 2022</p>

@@ -70,7 +70,7 @@ const UpdateEventSegment = () => {
         formState: { errors },
     } = useForm({
         defaultValues: async () => {
-            const response = await fetch(`https://mcpitc-server.vercel.app/segment-details/${id}`)
+            const response = await fetch(`${import.meta.env.VITE_Api_Url}/segment-details/${id}`)
             const data = await response.json();
             return {
                 eventName: data?.eventName,

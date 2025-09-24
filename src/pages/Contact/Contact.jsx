@@ -35,7 +35,7 @@ const Contact = () => {
 
 
   return (
-    <section className={`${theme === "" ? "bg-[#4C3BCF]" : ""} px-5 md:px-0`}>
+    <section className={`${theme === "" ? "bg-[#dee8f6]" : ""} px-5 md:px-0 py-20`}>
       <Helmet>
         <title>MCPITC | Contact</title>
       </Helmet>
@@ -54,22 +54,22 @@ const Contact = () => {
           <Lottie animationData={contactAnimation} loop={true} />
         </div>
         <div data-aos="fade-in">
-          <h1 className='text-4xl font-bold text-white text-center'>Contact Us</h1>
-          <p className='leading-loose	mt-3 text-white text-center mb-5'>Question, reports, feedback - We&apos;re here for you.</p>
+          <h1 className={`${theme === "" ? "text-black" : "text-gray-200"} text-4xl font-bold text-center`}>Contact Us</h1>
+          <p className={`${theme === "" ? "text-black" : "text-gray-200"} leading-loose	mt-3 text-center mb-5`}>Question, reports, feedback - We&apos;re here for you.</p>
           <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 border mx-auto">
             <form className="card-body" ref={form} onSubmit={sendEmail}>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
-                <input type="text" placeholder="Mashrafi Bin Nur" className="input input-bordered" name="user_name" required />
+                <input type="text" placeholder="your full name" className="input input-bordered" name="user_name" required />
               </div>
 
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" placeholder="mbngms@gmail.com" className="input input-bordered" name="user_email" required />
+                <input type="email" placeholder="your email" className="input input-bordered" name="user_email" required />
               </div>
 
               <div>

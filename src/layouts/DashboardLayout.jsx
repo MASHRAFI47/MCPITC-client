@@ -9,11 +9,11 @@ import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import useRole from "../hooks/useRole";
 import AdminMenu from "../components/Dashboard/Menu/AdminMenu";
 import { FaHome } from "react-icons/fa"
 import useAuth from "../hooks/useAuth"
 import { Helmet } from "react-helmet-async"
+import useRole from "../hooks/useRole"
 
 
 const DashboardLayout = () => {
@@ -57,7 +57,8 @@ const DashboardLayout = () => {
 
 
             {/* Desktop */}
-            <div className="hidden lg:block w-64 bg-gradient-to-b from-[#0101a3] to-[#00004c]">
+            {/* bg-gradient-to-b from-[#0101a3] to-[#00004c] */}
+            <div className="hidden lg:block w-64 bg-[#031748]">
                 <Sidebar />
             </div>
             <div className="flex-1">

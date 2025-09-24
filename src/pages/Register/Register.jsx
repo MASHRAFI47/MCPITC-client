@@ -10,7 +10,7 @@ import { CgSpinnerTwoAlt } from "react-icons/cg";
 const Register = () => {
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser, updateUserProfile, emailVerification } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -27,6 +27,7 @@ const Register = () => {
         .then(() => {
           updateUserProfile(fullName, picture)
             .then(() => {
+              emailVerification()
               toast.success("Registration Successful");
               setLoading(false)
               navigate('/')
@@ -70,9 +71,9 @@ const Register = () => {
               <span className="label-text">Password</span>
             </label>
             <input type="password" placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
-            <label className="label">
+            {/* <label className="label">
               <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-            </label>
+            </label> */}
             {errors.password && <span className="text-red-600">This field is required</span>}
           </div>
           <div className="form-control mt-6">

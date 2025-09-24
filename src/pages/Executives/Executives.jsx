@@ -343,9 +343,122 @@ const Executives = () => {
 
 
 
+    // 24-25
+    const panelMembers24to25 = [
+        {
+            id: 43,
+            name: "Mahfuz Ahmed Likhon",
+            post: "President",
+            image: mahfuz
+        },
+        {
+            id: 44,
+            name: "Tasniha Tanzil Zerin",
+            post: "Vice President",
+            image: blankImage
+        },
+        {
+            id: 45,
+            name: "Raiyan Hasan",
+            post: "Vice President",
+            image: raiyan
+        },
+        {
+            id: 46,
+            name: "Aryan Kamal Aviv",
+            post: "Secretary",
+            image: aviv
+        },
+        {
+            id: 47,
+            name: "Maisha Majed",
+            post: "Assistant Secretary",
+            image: maisha
+        },
+        {
+            id: 48,
+            name: "Humayra Jahan Hridita",
+            post: "Joint Secretary",
+            image: blankImage
+        },
+        {
+            id: 49,
+            name: "Proloy Charushi",
+            post: "IT Head",
+            image: proloy
+        },
+        {
+            id: 50,
+            name: "Zarin Tasnim Nowshin",
+            post: "Treasurer",
+            image: nowshin
+        },
+        {
+            id: 51,
+            name: "Afrida Ahnaf Chowdhury Bivor",
+            post: "Organizing Secretary",
+            image: blankImage
+        },
+        {
+            id: 52,
+            name: "Tasfiah Tasnim",
+            post: "Assistant Organizing Secretary",
+            image: tashfia
+        },
+        {
+            id: 53,
+            name: "Ahnaf Muttaki Adib",
+            post: "Field Manager",
+            image: adib
+        },
+        {
+            id: 54,
+            name: "Safayet Hossain Sabyoun",
+            post: "Content Manager",
+            image: blankImage
+        },
+        {
+            id: 55,
+            name: "Jerin Subah Aroni",
+            post: "Content Manager",
+            image: blankImage
+        },
+        {
+            id: 56,
+            name: "Azora Islam Ohie",
+            post: "Public Relations Officer",
+            image: azora
+        },
+        {
+            id: 57,
+            name: "Sumormee Sumanto",
+            post: "Information Technology Officer",
+            image: blankImage
+        },
+        {
+            id: 58,
+            name: "Soyad Soroar",
+            post: "Designer",
+            image: blankImage
+        },
+        {
+            id: 59,
+            name: "Tasnim Zerin Ohana",
+            post: "Executive",
+            image: blankImage
+        },
+        {
+            id: 60,
+            name: "Abdul Kadir Kabbo",
+            post: "IT Officer",
+            image: blankImage
+        },
+    ]
+
+
 
     return (
-        <section className={`${theme === "" ? "bg-[#4C3BCF]" : ""}`}>
+        <section className={`${theme === "" ? "bg-[#dee8f6]" : ""} py-12`}>
             <Helmet>
                 <title>MCPITC | Executives</title>
             </Helmet>
@@ -365,9 +478,28 @@ const Executives = () => {
 
                 <Tabs className={'text-center'} data-aos="fade-down">
                     <TabList>
-                        <Tab style={{ color: "#3DC2EC" }}><h1 className='text-xl font-bold'>2023-2024</h1></Tab>
-                        <Tab style={{ color: "#3DC2EC" }}><h1 className='text-xl font-bold'>2022-2023</h1></Tab>
+                        <Tab style={{ color: "#0052cc" }}><h1 className='text-xl font-bold'>2024-2025</h1></Tab>
+                        <Tab style={{ color: "#0052cc" }}><h1 className='text-xl font-bold'>2023-2024</h1></Tab>
+                        <Tab style={{ color: "#0052cc" }}><h1 className='text-xl font-bold'>2022-2023</h1></Tab>
                     </TabList>
+
+                    <TabPanel>
+                        <div>
+                            <div className='mt-10'>
+                                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                                    {
+                                        panelMembers24to25?.map(panel => <div key={panel?.id} className="card">
+                                            <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt="Shoes" /></figure>
+                                            <div className="card-body p-0 mt-4 gap-0">
+                                                <h2 className={`card-title mx-auto ${theme === "" ? "text-black" : "text-gray-200"}`}>{panel?.name}</h2>
+                                                <p className='font-semibold text-[#0052cc]'>{panel?.post}</p>
+                                            </div>
+                                        </div>)
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </TabPanel>
 
                     <TabPanel>
                         <div>
@@ -377,8 +509,8 @@ const Executives = () => {
                                         panelMembers23to24?.map(panel => <div key={panel?.id} className="card">
                                             <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt="Shoes" /></figure>
                                             <div className="card-body p-0 mt-4 gap-0">
-                                                <h2 className="card-title mx-auto text-white">{panel?.name}</h2>
-                                                <p className='font-semibold text-[#3DC2EC]'>{panel?.post}</p>
+                                                <h2 className={`card-title mx-auto ${theme === "" ? "text-black" : "text-gray-200"}`}>{panel?.name}</h2>
+                                                <p className='font-semibold text-[#0052cc]'>{panel?.post}</p>
                                             </div>
                                         </div>)
                                     }
@@ -394,8 +526,8 @@ const Executives = () => {
                                         panelMembers22to23?.map(panel => <div key={panel?.id} className="card">
                                             <figure><img src={panel?.image} className='h-[20rem] w-[20rem] object-cover rounded-full' alt="Shoes" /></figure>
                                             <div className="card-body p-0 mt-4 gap-0">
-                                                <h2 className="card-title mx-auto text-white">{panel?.name}</h2>
-                                                <p className='font-semibold text-[#3DC2EC]'>{panel?.post}</p>
+                                                <h2 className={`card-title mx-auto ${theme === "" ? "text-black" : "text-gray-200"}`}>{panel?.name}</h2>
+                                                <p className='font-semibold text-[#0052cc]'>{panel?.post}</p>
                                             </div>
                                         </div>)
                                     }

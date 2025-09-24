@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react"
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 import app from "../../firebase/firebase.config";
 import axios from "axios";
@@ -38,13 +38,28 @@ const AuthProvider = ({ children }) => {
         })
     }
 
-    
+    const emailVerification = () => {
+        const actionCodeSettings = {
+            url: 'https://mcpitc.web.app', // Redirect URL after verification
+            handleCodeInApp: true, // true if using React SPA
+        };
+
+        return sendEmailVerification(auth.currentUser, actionCodeSettings);
+    }
+
+    const resetPassword = (email) => {
+        return sendPasswordResetEmail(auth, email)
+    }
+
+
     const saveUser = async (user) => {
         const currentUser = {
             email: user?.email,
             name: user?.displayName,
             image: user?.photoURL,
-            role: "member"
+            role: "member",
+            designation: "member",
+            apply: 0,
         }
         const { data } = await axios.put(`${import.meta.env.VITE_Api_Url}/user`, currentUser)
         return data
@@ -52,7 +67,7 @@ const AuthProvider = ({ children }) => {
 
     const logOut = async () => {
         setLoading(true)
-        await axios.post(`https://mcpitc-server.vercel.app/logout`, {
+        await axios.post(`${import.meta.env.VITE_Api_Url}/logout`, {
             withCredentials: true
         })
         return signOut(auth)
@@ -60,9 +75,14 @@ const AuthProvider = ({ children }) => {
 
 
     useEffect(() => {
-        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+        const unSubscribe = onAuthStateChanged(auth, async (currentUser) => {
             setUser(currentUser)
-            saveUser(currentUser)
+
+            if (currentUser) {
+                await currentUser.reload();
+                await saveUser(currentUser);
+            }
+
             setLoading(false)
         })
         return () => {
@@ -70,7 +90,7 @@ const AuthProvider = ({ children }) => {
         }
     }, []);
 
-    const authInfo = { user, loading, theme, setTheme, createUser, updateUserProfile, signInUser, logOut }
+    const authInfo = { user, loading, theme, setTheme, createUser, updateUserProfile, signInUser, emailVerification, resetPassword, logOut }
 
     return (
         <AuthContext.Provider value={authInfo}>

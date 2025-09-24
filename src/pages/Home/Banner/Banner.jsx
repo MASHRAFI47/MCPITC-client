@@ -19,7 +19,6 @@ import Lottie from "lottie-react";
 import laptopAnimation from "../../../assets/laptopEdit.json";
 
 
-
 //for particles
 // import { useEffect, useState } from "react";
 // import Particles, { initParticlesEngine } from "@tsparticles/react";
@@ -59,7 +58,7 @@ const Banner = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div className={`hero min-h-screen bg-[#4C3BCF]`}>
+                    <div className={`hero min-h-screen bg-[#031848]`}>
                         <div className="hero-content flex-col lg:flex-row-reverse items-center">
                             <div className='' data-aos="fade-left">
                                 <Lottie animationData={laptopAnimation} loop={true} className='banner-pic' />
@@ -580,7 +579,6 @@ const Banner = () => {
                     </div>
                 </SwiperSlide> */}
             </Swiper>
-
         </div>
     )
 }

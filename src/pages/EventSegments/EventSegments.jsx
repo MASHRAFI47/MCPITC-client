@@ -23,7 +23,7 @@ const EventSegments = () => {
     console.log(segments)
 
     return (
-        <section className={`min-h-screen ${theme === "" ? "bg-[#4C3BCF]" : ""}`}>
+        <section className={`min-h-screen ${theme === "" ? "bg-[#dee8f6]" : ""}`}>
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {

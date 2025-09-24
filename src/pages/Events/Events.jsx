@@ -24,7 +24,7 @@ const Events = () => {
   if (isLoading) return <LoadingSpinner />
 
   return (
-    <section className={`min-h-screen ${theme === "" ? "bg-[#4C3BCF]" : ""} px-5 md:px-0`}>
+    <section className={`min-h-screen ${theme === "" ? "bg-[#dee8f6]" : ""} px-5 md:px-0 py-12`}>
       <Helmet>
         <title>MCPITC | Events</title>
       </Helmet>

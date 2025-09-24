@@ -1,10 +1,24 @@
+import LoadingSpinner from '../../../components/LoadingSpinner/LoadingSpinner';
+import useRole from '../../../hooks/useRole';
+import AdminStatistics from '../Admin/AdminStatistics';
+import GuestStatistics from './GuestStatistics';
 import './statistics.css'
 
 
 const Statistics = () => {
+    const [role, isLoading] = useRole();
+
+    if (isLoading) return <LoadingSpinner />
+
+
     return (
         <div>
-            <h1 className='text-3xl font-semibold'>No Statistics Data Available Yet</h1>
+            {
+                (role === "admin") ?
+                    <AdminStatistics />
+                    :
+                    <GuestStatistics />
+            }
         </div>
     )
 }
