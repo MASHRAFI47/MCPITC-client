@@ -57,17 +57,23 @@ const Header = () => {
 
 
     //activate or deactivate apply for executives button
-    const { data: onOffSwitch, isPending } = useQuery({
+    const { data: onOffSwitch, isLoading } = useQuery({
         queryKey: ['onOff', user?.email],
+        enabled: !!user,
+        retry: false,
         queryFn: async () => {
-            const { data } = await axiosCommon("/recruitment-onOff")
-            return data;
+            try {
+                const { data } = await axiosCommon("/recruitment-onOff")
+                return data
+            } catch (err) {
+                return null
+            }
         }
     })
 
-    if (isPending || loading) return <LoadingSpinner />
+    if (loading) return <LoadingSpinner />
 
-    console.log(onOffSwitch?.status?.onOff)
+    // console.log(onOffSwitch?.status?.onOff)
 
     return (
         <div className={`${theme === "" ? "bg-[#f4f6f8]" : ""} border-b-8 border-[#d8dbe5]`}>

@@ -51,7 +51,7 @@ const ForgetPassModal = ({ open, close, isOpen }) => {
                                 </div>
 
                                 <div className="form-control mt-6">
-                                    <button type="submit" className="btn glass md:w-3/12 bg-[#4B70F5] hover:bg-[#ff3535] text-white" disabled={loading}>Login</button>
+                                    <button type="submit" className="btn glass md:w-3/12 bg-[#4B70F5] hover:bg-[#ff3535] text-white" disabled={loading}>Send mail</button>
                                 </div>
 
                             </form>

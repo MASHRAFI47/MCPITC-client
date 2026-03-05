@@ -27,13 +27,13 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 toast.success("Sign In Successful")
-                navigate('/')
                 const user = { email }
                 axios.post(`${import.meta.env.VITE_Api_Url}/jwt`, user, {
                     withCredentials: true
                 })
                     .then(res => console.log(res.data))
                 console.log(result.user)
+                navigate('/')
             })
             .catch(error => {
                 console.log(error.message)
