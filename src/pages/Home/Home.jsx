@@ -10,7 +10,7 @@ const Home = () => {
       <Helmet>
         <title>MCPITC | Home</title>
       </Helmet>
-      
+
       <Banner />
       <About />
       <Sectors />

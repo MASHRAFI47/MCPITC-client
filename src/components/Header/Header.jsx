@@ -71,7 +71,7 @@ const Header = () => {
         }
     })
 
-    if (loading) return <LoadingSpinner />
+    if (loading || isLoading) return <LoadingSpinner />
 
     // console.log(onOffSwitch?.status?.onOff)
 
