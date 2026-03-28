@@ -36,7 +36,7 @@ const Blogs = () => {
               <h3 className={`${theme === "" ? "text-black" : "text-gray-200"} text-lg`}><span className="text-[#0052cc] font-bold text-lg">Publisher:</span> {blog?.publisher}</h3>
               <p className={`${theme === "" ? "text-black" : "text-gray-200"} whitespace-pre-wrap`}><span className="text-[#0052cc] font-bold text-md">Description:</span> {blog?.description}</p>
               <p className={`${theme === "" ? "text-black" : "text-gray-200"}`}><span className="text-[#0052cc] font-bold text-md">Publish Date:</span> {moment(blog?.timestamp).format('MMMM Do YYYY, h:mm:ss a')}</p>
-              <img src={blog?.image_url} className="w-full h-[35rem] rounded-lg" alt="blog image" />
+              <img src={blog?.image_url} className="w-full h-[20rem] md:h-[35rem] rounded-lg object-cover md:object-contain bg-black/10" alt="blog image" />
             </div>)
           }
 
