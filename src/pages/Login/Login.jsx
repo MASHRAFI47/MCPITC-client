@@ -22,24 +22,44 @@ const Login = () => {
         formState: { errors: loginErrors },
     } = loginForm
 
-    const loginSubmit = (data) => {
+    // const loginSubmit = (data) => {
+    //     const { email, password } = data;
+    //     signInUser(email, password)
+    //         .then(result => {
+    //             toast.success("Sign In Successful")
+    //             const user = { email }
+    //             axios.post(`${import.meta.env.VITE_Api_Url}/jwt`, user, {
+    //                 withCredentials: true
+    //             })
+    //                 .then(res => console.log(res.data))
+    //             console.log(result.user)
+    //             navigate('/')
+    //         })
+    //         .catch(error => {
+    //             console.log(error.message)
+    //             toast.error("Invalid email or password")
+    //         })
+    // }
+
+    const loginSubmit = async (data) => {
         const { email, password } = data;
-        signInUser(email, password)
-            .then(result => {
-                toast.success("Sign In Successful")
-                const user = { email }
-                axios.post(`${import.meta.env.VITE_Api_Url}/jwt`, user, {
-                    withCredentials: true
-                })
-                    .then(res => console.log(res.data))
-                console.log(result.user)
-                navigate('/')
-            })
-            .catch(error => {
-                console.log(error.message)
-                toast.error("Invalid email or password")
-            })
-    }
+
+        try {
+            const result = await signInUser(email, password);
+
+            const user = { email };
+
+            await axios.post(`${import.meta.env.VITE_Api_Url}/jwt`, user, {
+                withCredentials: true
+            });
+
+            toast.success("Sign In Successful");
+            navigate('/');
+        } catch (error) {
+            console.log(error.message);
+            toast.error("Invalid email or password");
+        }
+    };
 
 
     const open = () => {
