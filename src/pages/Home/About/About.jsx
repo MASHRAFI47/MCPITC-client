@@ -8,7 +8,7 @@ const About = () => {
   const { theme } = useAuth()
   return (
     // shapedividers_com-2171
-    <div className={`py-20 pt-24 px-5 md:px-0 ${theme === "" ? "bg-[#f4f6f8]" : ""} shapedividers_com-5628`} id="about">
+    <div className={`py-20 pt-24 px-5 md:px-0 ${theme === "" ? "bg-[#f4f6f8]" : ""} ${theme == "" ? "shapedividers_com-5628" : ""}`} id="about">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
         <div className="flex justify-center" data-aos="zoom-in" data-aos-delay="100">
           <Lottie animationData={techAnimation} className="w-3/4" loop={true} />

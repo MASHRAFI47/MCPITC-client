@@ -2,7 +2,8 @@ import { NavLink, Outlet } from "react-router-dom"
 import Sidebar from "../components/Dashboard/Sidebar/Sidebar"
 
 //logo
-import logo from '../assets/images/MCPITC_logo_transparant.png'
+// import logo from '../assets/images/MCPITC_logo_transparant.png'
+import logo from '/mcpic-logo.png'
 
 //drawer
 import Drawer from 'react-modern-drawer'
@@ -48,7 +49,7 @@ const DashboardLayout = () => {
                 className='bla bla bla'
             >
                 <div className="flex items-center">
-                    <img src={logo} className="w-24" alt="" /> <h1 className="font-bold text-3xl text-white">MCPITC</h1>
+                    <img src={logo} className="w-24" alt="" /> <h1 className="font-bold text-3xl text-white">MCPIC</h1>
                 </div>
                 {role === "admin" && <AdminMenu />}
                 <hr />

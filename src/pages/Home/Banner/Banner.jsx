@@ -17,6 +17,7 @@ import './banner.css'
 ///lottie react
 import Lottie from "lottie-react";
 import laptopAnimation from "../../../assets/laptopEdit.json";
+import useAuth from '../../../hooks/useAuth';
 
 
 //for particles
@@ -26,6 +27,8 @@ import laptopAnimation from "../../../assets/laptopEdit.json";
 
 
 const Banner = () => {
+
+    const { theme } = useAuth();
 
     // particles
     // const [init, setInit] = useState(false);
@@ -58,7 +61,7 @@ const Banner = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div className={`hero min-h-screen bg-[#031848]`}>
+                    <div className={`hero min-h-screen ${theme == "synthwave" ? "bg-[#08142e]" : "bg-[#031848]"}`}>
                         <div className="hero-content flex-col lg:flex-row-reverse items-center">
                             <div className='' data-aos="fade-left">
                                 <Lottie animationData={laptopAnimation} loop={true} className='banner-pic' />
